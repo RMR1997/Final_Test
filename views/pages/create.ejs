@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tambah Data</title>
+</head>
+
+<body class="max-w-screen max-h-screen">
+    <div class="bg-gray-50">
+        <div class="flex flex-col w-full">
+            <div class="flex justify-between items-center bg-blue-900 px-10 py-6 w-full">
+                <a href="#">
+                    <h1 class="text-white text-xl font-bold">FORM TAMBAH DATA</h1>
+                </a>
+            </div>
+            <div class="flex flex-col justify-center w-full h-full p-20">
+                <form action="/create" method="POST" class="flex flex-col justify-center w-full">
+                    <div class="flex flex-col justify-center items-center w-full px-44 space-y-8">
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="nama" class="text-md font-semibold text-gray-700">Nama:</label>
+                            <input type="text" id="nama" name="nama" required
+                                class="py-2 px-4 rounded-md bg-gray-100">
+                        </div>
+
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="tanggalLahir" class="text-md font-semibold text-gray-700">Tanggal Lahir:</label>
+                            <input type="date" id="tanggalLahir" name="tanggalLahir" required
+                                class="py-2 px-4 rounded-md bg-gray-100">
+                        </div>
+
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="tempatLahir" class="text-md font-semibold text-gray-700">Tempat:</label>
+                            <input type="tempatLahir" id="tempatLahir" name="tempatLahir" required
+                                class="py-2 px-4 rounded-md bg-gray-100">
+                        </div>
+
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="kelas" class="text-md font-semibold text-gray-700">Kelas:</label>
+                            <select name="kelas" id="kelas" required class="py-2 px-4 rounded-md bg-gray-100">
+                                <option value="IPA">IPA</option>
+                                <option value="MTK">MTK</option>
+                                <option value="IPS">IPS</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="alamat" class="text-md font-semibold text-gray-700">Alamat:</label>
+                            <input type="text" id="alamat" name="alamat" required
+                                class="py-2 px-4 rounded-md bg-gray-100">
+                        </div>  
+
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="noHp" class="text-md font-semibold text-gray-700">No Hp:</label>
+                            <input type="noHp" id="noHp" name="noHp" required
+                                class="py-2 px-4 rounded-md bg-gray-100">
+                        </div>
+
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="namaOrtu" class="text-md font-semibold text-gray-700">Nama Orangtua:</label>
+                            <input type="namaOrtu" id="namaOrtu" name="namaOrtu" required
+                                class="py-2 px-4 rounded-md bg-gray-100">
+                        </div>
+
+                        <div class="flex flex-col w-full space-y-2">
+                            <label for="noHpOrtu" class="text-md font-semibold text-gray-700">No Hp Orangtua:</label>
+                            <input type="noHpOrtu" id="noHpOrtu" name="noHpOrtu" required
+                                class="py-2 px-4 rounded-md bg-gray-100">
+                        </div>
+
+                        <button type="submit"
+                            class="bg-gray-900 text-lg font-semibold text-gray-100 px-4 py-2 rounded-md w-1/2">
+                            TAMBAH
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

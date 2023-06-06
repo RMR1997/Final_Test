@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>DATA SISWA</title>
+</head>
+
+<body class="max-w-screen max-h-screen">
+    <div class="flex justify-between items-center bg-gray-900 px-10 py-6 w-full">
+        <a href="/">
+            <h1 class="text-blue-600 text-xl font-bold">SMAN 1 PARUNGKUDA</h1>
+        </a>
+        <a href="/">
+            <h1 class="text-lg font-bold text-gray-100">logout</h1>
+        </a>
+        
+    </div>
+
+    <div class="flex flex-col justify-center w-full h-full bg-gray-50 p-20">
+        <div class="flex flex-col justify-center border rounded-md shadow-md w-full">
+            <div class="title flex justify-between w-full px-10 py-4 bg-gray-200">
+                <h1 class="font-bold text-lg text-gray-700">LIST DATA SISWA</h1>
+            </div>
+            <div class="flex flex-col justify-center w-full">
+                <table class="w-full text-left text-sm">
+                    <thead class="border-b dark:border-neutral-500">
+                        <tr>
+                            <th scope="col" class="px-10 py-4">No.</th>
+                            <th scope="col" class="px-10 py-4">Nama Siswa</th>
+                            <th scope="col" class="px-10 py-4">Tanggal Lahir</th>
+                            <th scope="col" class="px-10 py-4">Tempat Lahir</th>
+                            <th scope="col" class="px-10 py-4">Kelas</th>
+                            <th scope="col" class="px-10 py-4">Alamat</th>
+                            <th scope="col" class="px-10 py-4">No Hp</th>
+                            <th scope="col" class="px-10 py-4">Nama Orangtua</th>
+                            <th scope="col" class="px-10 py-4">No Hp Orangtua</th>
+                            <th scope="col" class="px-6 py-4">action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach((user, index)=> { %>
+                            <tr class="border-b dark:border-neutral-500">
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= index + 1 %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= user.nama %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= moment(user.tanggalLahir).format("DD-MM-YYYY")   %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= user.tempatLahir %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= user.kelas %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= user.alamat %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= user.noHp %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= user.namaOrtu %>
+                                </td>
+                                <td class="whitespace-nowrap px-10 py-4">
+                                    <%= user.noHpOrtu %>
+                                </td>
+                                <td class="whitespace-nowrap px-6 py-4 space-x-2">
+                                    <a href="/editsiswa/<%= user.id %>" class="text-blue-500 hover:underline">Edit</a>
+
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

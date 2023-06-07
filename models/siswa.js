@@ -10,7 +10,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      siswa.hasOne(models.data_kelas,{
+        foreignKey: "siswa_id"
+      })
     }
   }
   siswa.init({

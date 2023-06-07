@@ -1,5 +1,5 @@
 exports.roleAuth = (req,res,next) => {
-    const roleAllowed = ["admin"]
+    const roleAllowed = ["admin","SuperAdmin"]
     let allowedBool = false
 
     roleAllowed.map((roleAllowed) => {
